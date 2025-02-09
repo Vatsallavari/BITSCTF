@@ -159,14 +159,10 @@ foremost -i weird.png -o extracted_files
   - `extracted_hidden.jpg` (Hidden JPEG)
   - `extracted_audio.wav` (Hidden WAV)
 
----
-
 #### **2️⃣ Decode the Audio (Morse Code)**
 - **Go to:** [🔗 Morse Code Audio Decoder](https://morsecode.world/international/decoder/audio-decoder-adaptive.html)
 - **Upload** `extracted_audio.wav`
 - **Extract the passphrase** (decoded from Morse code).
-
----
 
 #### **3️⃣ Extract Hidden Data from the JPEG**
 Once the **passphrase** is obtained, use `steghide` to extract hidden content from the **JPEG**:
@@ -176,8 +172,6 @@ steghide extract -sf extracted_hidden.jpg -p "snooooooppppppp"
 ```
 
 This will **reveal a hidden file (`flag.txt`)**.
-
----
 
 #### **4️⃣ Read the Flag**
 ```bash
