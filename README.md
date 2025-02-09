@@ -191,23 +191,6 @@ BITSCTF{1_4m_5l33py_1256AE76}
 
 ---
 
-## 🚀 Getting Started
-
-### 📦 Prerequisites:
-- Python **3.x**
-- Dependencies: Install via `pip`:
-  ```bash
-  pip install -r requirements.txt
-  ```
-
-### ⚡ Running the Scripts:
-Each script is **standalone** and can be executed directly:
-```bash
-python script_name.py
-```
-
----
-
 ## 🤝 Contributing
 
 Feel free to **fork** this repo, submit **pull requests**, or suggest improvements.
