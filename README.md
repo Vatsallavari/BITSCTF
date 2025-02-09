@@ -1,10 +1,8 @@
-Here is a **GitHub README** write-up for your repository containing the scripts:
-
----
-
-# 🔥 BITS-CTF Scripts Collection
+# 🔥 CTF Scripts Collection - **Finders Keepers Challenge**
 
 This repository contains a set of **Capture The Flag (CTF) challenge scripts** used to solve various security and cryptographic challenges. Each script is specialized for a unique challenge scenario, from **radio signal analysis** to **minesweeper automation**, **obfuscated string decryption**, **cookie prediction**, and **network-based authentication bypass**.
+
+Additionally, this repository includes a **steganography-based challenge** called **"Finders Keepers"**, which involves extracting hidden data from images and audio files using various forensic techniques.
 
 ## 📜 Table of Contents
 
@@ -13,6 +11,7 @@ This repository contains a set of **Capture The Flag (CTF) challenge scripts** u
 - [loginator.py](#loginatorpy) - Obfuscated String Reversal
 - [cookies.py](#cookiespy) - Predictive Cookie Cracker
 - [HotPause.py](#hotpausepy) - Network Authentication Solver
+- [Finders Keepers (Steganography Challenge)](#🔍-finders-keepers-steganography-challenge)
 
 ---
 
@@ -139,6 +138,55 @@ python HotPause.py
 #### 🏆 CTF Flag:
 ```
 BITSCTF{that_was_a_very_weird_OSINT_challenge_afd12df}
+```
+
+---
+
+## 🔍 **Finders Keepers (Steganography Challenge)**
+
+### 🎯 Challenge:
+- Extract **hidden files** embedded in an image (`weird.png`).
+- Decode a **Morse code message** from an extracted **WAV audio**.
+- Use **steganographic techniques** to reveal a hidden text file (`flag.txt`).
+
+### 🔧 Steps:
+
+#### **1️⃣ Extract Hidden Files**
+```bash
+foremost -i weird.png -o extracted_files
+```
+- This will generate an `extracted_files/` directory containing:
+  - `extracted_hidden.jpg` (Hidden JPEG)
+  - `extracted_audio.wav` (Hidden WAV)
+
+---
+
+#### **2️⃣ Decode the Audio (Morse Code)**
+- **Go to:** [🔗 Morse Code Audio Decoder](https://morsecode.world/international/decoder/audio-decoder-adaptive.html)
+- **Upload** `extracted_audio.wav`
+- **Extract the passphrase** (decoded from Morse code).
+
+---
+
+#### **3️⃣ Extract Hidden Data from the JPEG**
+Once the **passphrase** is obtained, use `steghide` to extract hidden content from the **JPEG**:
+
+```bash
+steghide extract -sf extracted_hidden.jpg -p "snooooooppppppp"
+```
+
+This will **reveal a hidden file (`flag.txt`)**.
+
+---
+
+#### **4️⃣ Read the Flag**
+```bash
+cat flag.txt
+```
+
+**🏆 Final CTF Flag:**
+```
+BITSCTF{1_4m_5l33py_1256AE76}
 ```
 
 ---
