@@ -191,10 +191,5 @@ Feel free to **fork** this repo, submit **pull requests**, or suggest improvemen
 
 ---
 
-## 📜 License
-
-This project is licensed under the **MIT License**.
-
----
 
 🔥 **Happy CTFing!** 🚀
