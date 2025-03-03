@@ -1,4 +1,4 @@
-# 🔥 CTF Scripts Collection - **Finders Keepers Challenge**
+# 🔥 CTF Scripts Collection - **BITSCTF**
 
 This repository contains a set of **Capture The Flag (CTF) challenge scripts** used to solve various security and cryptographic challenges. Each script is specialized for a unique challenge scenario, from **radio signal analysis** to **minesweeper automation**, **obfuscated string decryption**, **cookie prediction**, and **network-based authentication bypass**.
 
